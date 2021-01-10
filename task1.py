@@ -13,7 +13,27 @@ def isprime(num):
         if (num % i) == 0:
             return False
     return True
+
+
+ print(isfeb(1))
+print(isprime(1))
+dupl = set()
+de={}
+x= list( map( int, input().split()))
+    # 
+    # x = val.split()
+for num in x :
+        
+    if isfeb(num):
             
+        if isprime(num):
+                # print(num)
+            if x.count(num) >= 1:
+                dupl.add(num)
+                de[num]=x.count(num)
+            # print(num,x.count(num))
+for nn in dupl:
+    print(nn,de[nn] )           
         
 def isfeb(n):
      
@@ -32,22 +52,4 @@ def isfeb(n):
             return True
         else:
             return False
-print(isfeb(1))
-print(isprime(1))
-dupl = set()
-de={}
-x= list( map( int, input().split()))
-    # 
-    # x = val.split()
-for num in x :
-        
-    if isfeb(num):
-            
-        if isprime(num):
-                # print(num)
-            if x.count(num) >= 1:
-                dupl.add(num)
-                de[num]=x.count(num)
-            # print(num,x.count(num))
-for nn in dupl:
-    print(nn,de[nn] )
+
